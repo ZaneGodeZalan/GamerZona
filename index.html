@@ -10,11 +10,6 @@
         height: 200px;
         background: #aaa;
     }
-
-    #img {
-        width: 300px;
-        height: auto;
-    }
 </style>
 <body>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -39,25 +34,25 @@
     <div id="slider" class="container carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/expedition33.jpg" alt="MAN NGE152" title="MAN NGE152" id="img">
+                <img src="img/DMC5.webp" alt="MAN NGE152" title="MAN NGE152" id="img"  class="w-100 d-block mx-auto">
             </div>
             <div class="carousel-item">
-                <img src="img/hollowKinght.jpg" alt="Ikarus 411T" title="Ikarus 411T" id="img">
+               <img src="img/DMC5.webp" alt="MAN NGE152" title="MAN NGE152" id="img"  class="w-100 d-block mx-auto">
             </div>
             <div class="carousel-item">
-                <img src="img/expedition33.jpg" alt="Solaris Trollino 18 III" title="Solaris Trollino 18 III" id="img">
+               <img src="img/DMC5.webp" alt="MAN NGE152" title="MAN NGE152" id="img"  class="w-100 d-block mx-auto">
             </div>
             <div class="carousel-item">
-                <img src="img/expedition33.jpg" alt="Ikarus 280T" title="Ikarus 280T" id="img"> 
+               <img src="img/DMC5.webp" alt="MAN NGE152" title="MAN NGE152" id="img"  class="w-100 d-block mx-auto">
             </div>
         </div>  
+                <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
         </button>
     </div>
     <h1>Gamer Zóna</h1>
@@ -67,19 +62,19 @@
             <div class="col-sm-6">
                 <h1>Az idei év GOTY játékai</h1>
                 <h5>A gamer közösség szerint:</h5>
-<div id="slider2" class="container carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner fakeimg">
+<div id="slider2" class="container carousel slide p-0" data-bs-ride="carousel">
+    <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="img/expedition33.jpg" alt="MAN NGE152" title="MAN NGE152" id="img">
+            <img src="img/expedition33.jpg" alt="MAN NGE152" title="MAN NGE152" id="img" class="img-fluid m-0 mx-auto d-block w-75">
         </div>
         <div class="carousel-item">
-            <img src="img/hollowKinght.jpg" alt="Ikarus 411T" title="Ikarus 411T" id="img">
+            <img src="img/hollowKinght.jpg" alt="Ikarus 411T" title="Ikarus 411T" id="img" class="img-fluid m-0 w-75">
         </div>
         <div class="carousel-item">
-            <img src="img/expedition33.jpg" alt="Solaris Trollino 18 III" title="Solaris Trollino 18 III" id="img">
+            <img src="img/expedition33.jpg" alt="Solaris Trollino 18 III" title="Solaris Trollino 18 III" id="img" class="img-fluid m-0">
         </div>
         <div class="carousel-item">
-            <img src="img/expedition33.jpg" alt="Ikarus 280T" title="Ikarus 280T" id="img"> 
+            <img src="img/expedition33.jpg" alt="Ikarus 280T" title="Ikarus 280T" id="img" class="img-fluid m-0"> 
         </div>
     </div>  
     <!-- Left and right controls -->
@@ -126,6 +121,51 @@
             </div>
         </div>
     </div>
+
+    <div class="row">    
+    <div class="col-sm-3">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Turisztikai célpontok</th>
+          </tr>
+        </thead>
+        <tbody class="kozep keplink">
+          <tr>
+            <td onclick="indie('DMC5');" onmouseover="keprejt('')">Hollow Knight</td>
+          </tr>
+          <tr>
+            <td onclick="indie('expedition33');" onmouseover="keprejt('')">Hollow Knight Silksong</td>
+          </tr>
+          <tr>
+            <td onclick="indie('hollowKinght');" onmouseover="keprejt('')">Undertale</td>
+          </tr>
+          <tr>
+            <td onclick="indie('');" onmouseover="keprejt('')">DeltaRune</td>
+          </tr>
+          <tr>
+            <td onclick="indie('');" onmouseover="keprejt('')"></td>
+          </tr>
+          <tr>
+            <td onclick="indie(''); " onmouseover="keprejt('')"></td>
+          </tr>
+          <tr>
+            <td onclick="indie('');" onmouseover="keprejt('')"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
+    <div class="col-sm-9 text-primary">      
+      <div id="turizmusszovegkeret">
+        <p>A tó feltöltése után magyar turisták kezdték látogatni a tavat, mert sokkal olcsóbb volt a Balatonnál. A tó környékén megkezdődött a falusi turizmus, a tó körül kempingek, szállodák, strandok épültek. A part mentén hat szabadstrand, Tiszafüreden pedig termálfürdők kínálnak fürdési lehetőséget. Abádszalók környékén a vízi sportok széles skálája gyakorolható, beleértve motoros vízi sportokat is. A horgászat a szabályok betartása mellett engedélyezett.</p>
+        <p>A Tisza-tó vadvízi világa gyalog, kerékpárral, lóháton és csónakkal is bejárható. A Tisza-tavi madárrezervátum védett terület, csak vezetővel látogatható.</p>
+        <p>2012-ben nyílt meg Poroszlón a Tisza-tavi Ökocentrum, mely interaktív módon mutatja be a Tisza-tó és a Tisza-völgy természeti értékeit és élővilágát. A látogatóközpont 2600 m<sup>2</sup>-es főépülete többek között kiállításoknak, rendezvényeknek ad otthont, de kilátó is található itt. A 735 000 liter össztérfogatú akváriumrendszer a legnagyobb édesvízű akvárium Európában. A főépületet 7 hektáros szabadidőpark veszi körül állatbemutatókkal és játszóterekkel; skanzenje a 19. századi életmódot mutatja be. Az ökocentrum kikötőjéből vízitúrák és kishajós kirándulások indulnak.</p>
+      </div>
+      <div id="turizmuskepkeret">
+        <img id="turizmuskep">
+      </div>
+    </div>    
+  </div>
 
     <div class="mt-5 p-4 bg-dark text-white text-center">
         <p>Elérhetőségeink:</p>
