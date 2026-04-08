@@ -1,14 +1,70 @@
-h1{
+body {
+    background-image: linear-gradient(to bottom, rgba(127, 8, 207, 0.75), rgba(0, 94, 255, 0.63), rgba(74, 32, 210, 0.52), rgba(150, 77, 214, 0.38));
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size: 2.5rem;
     font-style: initial;
-    color: blueviolet;
+    color: black;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+    margin-bottom: 20px;
 }
 
-p{
-    font-size: 15px;
+p {
+    font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     font-style: oblique;
+    color: #f0f0f0;
+}
+.col-sm-6, .col-sm-3, .col-sm-9, .carousel, .navbar {
+    background: rgba(20, 20, 20, 0.5) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px !important;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6); 
+    transition: transform 0.3s ease, border 0.3s ease;
 }
 
+#jatek_leiras_doboz {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+#jatek_kep_keret {
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(138, 43, 226, 0.4);
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 400px;    
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+
+#fokep_megjelenito {
+    max-width: 100%;
+    max-height: 380px;
+    border-radius: 10px;
+    object-fit: contain;    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+}
+
+.keplink td {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.keplink td:hover {
+    background: rgba(138, 43, 226, 0.4) !important;
+    padding-left: 30px !important;
+    color: white;
+}

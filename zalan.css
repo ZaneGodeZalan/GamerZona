@@ -1,0 +1,118 @@
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Fira Code', monospace;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgba(13, 13, 13, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #00f2ff;
+}
+
+.hero-section {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid #ff00ff;
+}
+
+.vault-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 0px; 
+    box-shadow: 10px 10px 0px #222;
+    padding: 20px;
+    height: 100%;
+}
+
+.main-display {
+    border-left: 4px solid #00f2ff;
+    min-height: 450px;
+}
+
+.list-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    text-align: left;
+    padding: 12px;
+    width: 100%;
+    transition: 0.3s;
+    border-left: 2px solid transparent;
+}
+
+.list-btn:hover, .list-btn.active {
+    background: #252525;
+    color: #00f2ff;
+    border-left: 4px solid #00f2ff;
+    padding-left: 20px;
+}
+
+.neon-text {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.neon-text-blue {
+    color: #00f2ff;
+    text-shadow: 0 0 10px #00f2ff;
+}
+
+.image-container-neon {
+    border: 2px solid #00f2ff;
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+.dev-circle {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #ff00ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+.description-text {
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.news-content {
+    transition: opacity 0.3s ease;
+}
+
+.btn-neon-mini {
+    background: transparent;
+    border: 1px solid #ff00ff;
+    color: #ff00ff;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-neon-mini:hover {
+    background: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.fade-out {
+    opacity: 0;
+}
