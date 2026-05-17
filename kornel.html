@@ -8,20 +8,143 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #0d0d0d;
-        }
+    background-image: linear-gradient(to bottom, rgba(127, 8, 207, 0.75), rgba(0, 94, 255, 0.63), rgba(74, 32, 210, 0.52), rgba(150, 77, 214, 0.38));
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
+}
 
-        p {
-            color: #e0e0e0;
-        }
+.navbar {
+    background: rgba(20, 20, 20, 0.5) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+    margin-top: 15px;
+}
 
-        th {
-            color: #e0e0e0;
-        }
-        h1 {
-            color: #e0e0e0;
-        }
-        .fekete {
+.hero-section {
+    height: 60vh;
+    background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.vault-card {
+    background: rgba(20, 20, 20, 0.5) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px !important;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+.main-display {
+    border-left: 4px solid #0dcaf0;
+    min-height: 450px;
+}
+
+.list-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    text-align: left;
+    padding: 12px;
+    width: 100%;
+    transition: 0.3s;
+    border-left: 2px solid transparent;
+}
+
+.list-btn:hover, .list-btn.active {
+    background: rgba(138, 43, 226, 0.4) !important;
+    color: #fff;
+    border-left: 4px solid #0dcaf0;
+    padding-left: 20px;
+}
+
+.neon-text {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.neon-text-blue {
+    color: #0dcaf0;
+    text-shadow: 0 0 10px rgba(13, 202, 240, 0.5);
+}
+
+.image-container-neon {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dev-circle {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 5px;
+    color: #fff;
+}
+
+.description-text {
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.news-content {
+    transition: opacity 0.3s ease;
+}
+
+.btn-neon-mini {
+    background: transparent;
+    border: 1px solid #0dcaf0;
+    color: #0dcaf0;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.btn-neon-mini:hover {
+    background: #0dcaf0;
+    color: #000;
+    box-shadow: 0 0 10px #0dcaf0;
+}
+
+.fade-out {
+    opacity: 0;
+}       
+th {
+    color: #e0e0e0;
+}
+.fekete {
             color: black;
         }
     </style>
