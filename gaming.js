@@ -6,7 +6,7 @@ const jatekAdatok = {
     },
     'gta': {
         cim: "Grand Theft Auto V",
-        leiras: "A Rockstar Games alkotása egy monumentális nyílt világú kaland, amely Los Santos napfényes és bűnnel teli utcáin játszódik. A történet különlegessége, hogy három különböző hátterű bűnöző sorsát irányíthatjuk egyszerre, akiknek útjai egy nagyszabású rablássorozatban fonódnak össze. A játékosok előtt álló szabadság szinte határtalan, legyen szó repülők vezetéséről, tengeri búvárkodásról vagy egyszerű utcai versenyekről. A részletgazdag környezet és a szatirikus humor egyedülálló módon mutatja be a modern amerikai társadalom paródiáját. A több mint egy évtizede töretlen népszerűségnek örvendő Online mód pedig folyamatosan frissülő tartalmakkal tartja lázban a közösséget.",
+        leiras: "A Rockstar Games alkotása egy monumentális nyílt világú kaland, amely Los Santos napfényes és bűnnel teli utcáin játszódik. A történet különlegessége, hogy three különböző hátterű bűnöző sorsát irányíthatjuk egyszerre, akiknek útjai egy nagyszabású rablássorozatban fonódnak össze. A játékosok előtt álló szabadság szinte határtalan, legyen szó repülők vezetéséről, tengeri búvárkodásról vagy egyszerű utcai versenyekről. A részletgazdag környezet és a szatirikus humor egyedülálló módon mutatja be a modern amerikai társadalom paródiáját. A több mint egy évtizede töretlen népszerűségnek örvendő Online mód pedig folyamatosan frissülő tartalmakkal tartja lázban a közösséget.",
         kep: "img/gta5.avif"
     },
     'dmc': {
@@ -36,7 +36,7 @@ const jatekAdatok = {
     },
     'eldenring': {
         cim: "Elden Ring",
-        leiras: "A FromSoftware és George R. R. Martin együttműködéséből született mű a modern nyílt világú soulslike játékok abszolút csúcspontja. A Lands Between hatalmas területei titkokat, félelmetes főellenségeket és lélegzetelállító tájakat rejtenek minden felfedező számára. A játékosok teljes szabadságot kapnak abban, hogyan építik fel karakterüket, legyen szó varázslatról vagy nyers fizikai erőről. A kihívás hatalmas, de minden győzelem olyan sikerélményt ad, amellyel kevés más játék tud versenyezni a piacon. Ez a sötét fantasy világ minden egyes felfedezett barlanggal és legyőzött szörnyeteggel mélyebbre rántja a játékost a saját mitológiájába.",
+        leiras: "A FromSoftware és George R. R. Martin együttműködéséből született mű a modern nyílt világú soulslike játékok abszolút csúcspontja. A Lands Between hatalmas területei titkokat, félelmetes főellenségeket és lélegzetelállító tájakat rejtenek minden felfedező számára. A játékosok teljes szabadságot gapnak abban, hogyan építik fel karakterüket, legyen szó varázslatról vagy nyers fizikai erőről. A kihívás hatalmas, de minden győzelem olyan sikerélményt ad, amellyel kevés más játék tud versenyezni a piacon. Ez a sötét fantasy világ minden egyes felfedezett barlanggal és legyőzött szörnyeteggel mélyebbre rántja a játékost a saját mitológiájába.",
         kep: "img/eldenRing.png"
     }
 };
@@ -63,5 +63,19 @@ function tartalomCsere(jatekKulcs) {
                 kepMegjelenito.style.opacity = "1";
             }, 50);
         }
+    }
+}
+
+function szavazas(jatekKulcs) {
+    const szamlalo = document.getElementById(`${jatekKulcs}-szavazat`);
+    if (szamlalo) {
+        let aktualisErtek = parseInt(szamlalo.innerText);
+        szamlalo.innerText = aktualisErtek + 1;
+
+        const visszajelzes = document.getElementById('szavazas-feedback');
+        visszajelzes.style.display = 'block';
+        setTimeout(() => {
+            visszajelzes.style.display = 'none';
+        }, 2000);
     }
 }

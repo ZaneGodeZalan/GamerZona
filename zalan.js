@@ -1,13 +1,28 @@
 const indieData = {
     'hollow': {
         name: "Hollow Knight",
-        desc: "A Hollow Knight egy gyönyörűen megrajzolt akció-kalandjáték, amely egy hatalmas, összefüggő rovarvilágban játszódik. A játékosok egy névtelen lovagot irányítanak, aki Hallownest romos királyságát fedezi fel a mélyben. A játék híres a precíz irányításáról, a rendkívül nehéz boss harcairól és a melankolikus hangulatáról. Minden egyes terület sajátos atmoszférával és titkokkal rendelkezik, amelyek fokozatosan fedik fel a birodalom bukásának történetét. Ez a metroidvania az indie fejlesztés egyik legmagasabb szintű alkotása, amely felejthetetlen élményt nyújt.",
+        desc: "A Hollow Knight egy gyönyörűen megrajzolt akció-kalandjáték, amely egy hatalmas, összefüggő rovarvilágban játszódik. A játékosok egy névtelen lovagot irányítanak, aki Hallownest romos királyságát fedezi fel a mélyben. A játék híres a precíz irányításáról, a rendkívül nehéz boss harcairól és a melankolikus hangulatáról. Minden egyes terület sajátos atmoszférával és titkokkal rendelkezik, amelyek fokozatosan fedik fel a birodalom bukásának történetét. Ez a metroidvania az indie fejlesztés egyik legalapvetőbb remekműve.",
         img: "img/hollowKinght.jpg"
     },
     'stardew': {
         name: "Stardew Valley",
-        desc: "A Stardew Valley egy végtelenül barátságos farm-szimulátor, ahol nagyapád elhanyagolt gazdaságát kell virágzó birtokká varázsolnod. A játék során nemcsak ültethetsz, hanem horgászhatsz, bányászhatsz és barátságokat is köthetsz a falu lakóival. Az évszakok váltakozása és a különböző közösségi események gondoskodnak arról, hogy a vidéki élet sose váljon unalmassá. Egyetlen fejlesztő, ConcernedApe készítette, és ez a személyes odaadás minden egyes pixelben érezhető. Tökéletes választás azoknak, akik egy kis nyugalomra és stresszmentes kikapcsolódásra vágynak.",
+        desc: "A Stardew Valley egy végtelenül barátságos farm-szimulátor, ahol nagyapád elhanyagolt gazdaságát kell virágzó birtokká varázsolnod. A játék során nemcsak ültethetsz, hanem horgászhatsz, bányászhatsz és barátságokat is köthetsz a falu lakóival. Az évszakok váltakozása és a különböző közösségi események gondoskodnak arról, hogy a vidéki élet sose váljon unalmassá. Egyetlen fejlesztő, ConcernedApe készítette, és ez a személyes odaadás minden egyes pixelben érezhető. Tökéletes választás a stresszmentes kikapcsolódásra.",
         img: "img/expedition33.jpg"
+    },
+    'hades': {
+        name: "Hades",
+        desc: "A Hades egy pörgős, rogue-like akciójáték, amely a görög mitológia világába kalauzolja el a játékosokat. Zagreus, az alvilág hercegének bőrébe bújva a célunk, hogy áttörjünk apánk, Hádész birodalmának védelmi vonalain, és feljussunk az Olümposzra. Minden egyes szökési kísérlet során különböző olümposzi istenek áldásait nyerhetjük el, ami teljesen egyedi fegyverkombinációkat tesz lehetővé. A játék zsenialitása abban rejlik, hogy a halál nem a kudarcot jelenti, hanem a történet továbbgördülését és a karakterünk folyamatos fejlődését.",
+        img: "img/hades.jpg"
+    },
+    'celeste': {
+        name: "Celeste",
+        desc: "A Celeste egy kőkemény, mégis hihetetlenül inspiráló precíziós platformer játék, amely Madeline történetét meséli el. A fiatal lány elhatározza, hogy megmássza a rejtélyes Celeste-hegyet, miközben saját belső démonaival, a szorongással és a bizonytalansággal is meg kell küzdenie. A játékmenet rendkívül letisztult, de komoly ügyességet követel meg: ugrás, mászás és a levegőben való lökődés segítségével kell navigálnunk. A zseniális szinttervezés és a gyönyörű, érzelmes zenei aláfestés miatt ez a játék felejthetetlen élmény.",
+        img: "img/celeste.jpg"
+    },
+    'outer': {
+        name: "Outer Wilds",
+        desc: "Az Outer Wilds egy egyedülálló, felfedezésre épülő sci-fi kalandjáték, amely egy 22 perces időhurokba zárt naprendszerben játszódik. Játékosként az űrprogram legújabb tagjaként indulunk útnak, hogy felderítsük egy ősi, rejtélyes civilizáció titkait. A hurok végén a nap szupernóvává válik, elpusztítva mindent, mi pedig újra a kiindulóponton ébredünk, de a megszerzett tudásunk megmarad. A játékban nincsenek hagyományos szintlépések, az egyetlen fejlődési forrásunk a saját kíváncsiságunk.",
+        img: "img/outerwilds.jpg"
     }
 };
 
@@ -31,16 +46,16 @@ function showIndie(key, element) {
 
 const newsSecondPage = {
     1: {
-        title: "Silksong: A belsős infó",
-        text: "A legutóbbi tesztek alapján a játék már játszható állapotban van, de a Team Cherry tökéletességre törekszik. Megjelenés: Amikor kész lesz."
+        title: "Hades II: Új Olympus Update",
+        text: "A belsős források szerint az új frissítéssel érkezik egy teljesen új fegyver, két eddig nem látott olümposzi patrónus, valamint a sztori mód folytatása."
     },
     2: {
-        title: "A magyar siker titka",
-        text: "A 'Project Budapest' nevű játék már 100.000 eladásnál jár. A fejlesztő szerint a siker kulcsa a közösségi visszajelzés volt."
+        title: "Silksong: A fizika átalakul",
+        text: "A legújabb tesztfázisban a fejlesztők finomítottak a hálóvetési mechanikákon, amivel minden eddiginél gyorsabbá válik a vertikális harcrendszer."
     },
     3: {
-        title: "Pixel Art jövője",
-        text: "A kutatások szerint a játékosok 40%-a a hangulat miatt választja a pixeles stílust a fotorealisztikus helyett."
+        title: "Manor Lords: Folytatás",
+        text: "A fejlesztő bejelentette, hogy a bevétel jelentős részét a stúdió bővítésére és egy teljesen új ostrommechanika lefejlesztésére fordítja."
     }
 };
 
