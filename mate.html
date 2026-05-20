@@ -16,7 +16,128 @@
          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
          overflow-x: hidden;
         }
+        .teljes-kepernyo-tarolo {
+            
+            background: linear-gradient(135deg, #a78bfa 0%, #818cf8 50%, #c084fc 100%);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            gap: 24px; 
+            padding: 40px; 
+            box-sizing: border-box;
+        }
 
+        
+        .teljes-kepernyo-tarolo .egyedi-kartya {
+            background: linear-gradient(145deg, rgba(39, 45, 87, 0.85) 0%, rgba(53, 50, 99, 0.9) 100%);
+            border-radius: 24px; 
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 
+                        inset 0 1px 2px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-sizing: border-box;
+            height: 100%; 
+        }
+
+        .teljes-kepernyo-tarolo .bal-oldali-kartya {
+            flex: 1; 
+            min-width: 320px;
+            max-width: 400px;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .teljes-kepernyo-tarolo .jobb-oldali-kartya {
+            flex: 3; 
+            position: relative;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .teljes-kepernyo-tarolo .jobb-oldali-kartya::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #22d3ee, #06b6d4);
+            border-top-left-radius: 24px;
+            border-bottom-left-radius: 24px;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.7);
+        }
+
+        .teljes-kepernyo-tarolo .kartya-fejlec-cim {
+            font-size: 32px;
+            font-weight: 500;
+            padding: 0 40px 30px 40px;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .teljes-kepernyo-tarolo .menupontok-csoportja {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .teljes-kepernyo-tarolo .menupont-div {
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #9cb3c9;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            user-select: none;
+        }
+
+        .teljes-kepernyo-tarolo .menupont-div:hover:not(.active) {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.03);
+            padding-left: 45px; 
+        }
+
+        .teljes-kepernyo-tarolo .menupont-div.active {
+            color: #ffffff;
+            font-weight: 500;
+            background: linear-gradient(90deg, rgba(88, 65, 184, 0.8) 0%, rgba(104, 81, 204, 0.3) 100%);
+            border-left: 5px solid #00f0ff; 
+            padding-left: 35px; 
+            box-shadow: inset 10px 0 20px rgba(0, 240, 255, 0.08);
+        }
+
+        .teljes-kepernyo-tarolo .rendszer-allapot-szoveg {
+            font-size: 36px;
+            color: rgba(255, 255, 255, 0.35);
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+
+        @media (max-width: 900px) {
+            html, body {
+                overflow: auto; 
+            }
+            .teljes-kepernyo-tarolo {
+                height: auto;
+                min-height: 100vh;
+                flex-direction: column; 
+                padding: 20px;
+                gap: 20px;
+            }
+            .teljes-kepernyo-tarolo .bal-oldali-kartya,
+            .teljes-kepernyo-tarolo .jobb-oldali-kartya {
+                max-width: 100%;
+                height: auto;
+                min-height: 380px;
+            }
+        }
         .navbar {
         background: rgba(20, 20, 20, 0.5) !important;
         backdrop-filter: blur(8px);
@@ -39,7 +160,7 @@
         .flex-kontener {
         display: flex;
         align-items: center;
-        gap: 20px; /* Megtartja a 20 pixeles távolságot a kettő között */
+        gap: 20px; 
         }
         .flex-kep {
         max-width: 200px;
@@ -98,12 +219,17 @@
     <p>ezen a weboldalon megtekintheti játékok fejlődését.</p>
     <br>
     <br>
-    <div class="col-12 col-md-6">
-        <div class="vault-card">
-    <p>kezdetben a játékok pixelesek és 2D-sek voltak mint a <a href="https://www.goodeveca.net/nimrod/GAME/index.html" target="_blank">Nimrod</a>(1951) ugyan ezelőtt is voltak 2D-s játékok mivel az első 2D-s játék 1947-ben jelent meg amit <a href="https://www.google.com/search?client=firefox-b-d&hs=aF0U&sca_esv=232f07d297806d5e&sxsrf=ANbL-n4KY8PURsFbbpmd6dcJ2ygW_DPNEQ:1775639823140&udm=7&fbs=ADc_l-akmJ9clyHhwEynr9YRwEo_tYQUWp-_aNxOcHgKpLE-YZ2V4cVLNMgOkgu4ROJ1y-h7AretHZR61zzPGUvgzXWtVmaT4KdLdLqWkWDqozMDdGYef85fgqydMHKJqnWShlsLiXyfo8qwhV9HWMk69n_0JKdSsoptPkpULLvDe7RhMXXN1ckcHy_OXdFqm1bvhbediQ9LUvOrM_8xFhEI8PRLzrygJw&q=Cathode-Ray+Tube+Amusement+Device&sa=X&ved=2ahUKEwjZ5aDn9d2TAxXD9AIHHVQWIlUQtKgLegQIFhAB&biw=1920&bih=955&dpr=1#fpstate=ive&vld=cid:8f9c3a65,vid:R_uEWSNXzzk,st:0">Cathode-Ray Tube Amusement Device</a>-nak hívtak.
-         Az első 3D-s játékok 1973-tól jelennek meg a mai napig mint például a <a href="https://bbcmicro.co.uk/jsbeeb/play.php?autoboot&disc=https://bbcmicro.co.uk/gameimg/discs/4304/Disc173-BATTLEZONERSTD.ssd&noseek" target="_blank">Battlezone</a> </p>
-         <h2>Cathode-Ray Tube Amusement Device</h2>
+       <div class="teljes-kepernyo-tarolo">
+        <div class="egyedi-kartya bal-oldali-kartya">
+            <div class="kartya-fejlec-cim">1948-1980-as évek játékai
     <img class="jobb-kep" src="img/crt.webp" alt="Cathode-Ray Tube Amusement Device" title="Cathode-Ray Tube Amusement Device" >
+    <div class="menupontok-csoportja">
+                <div class="menupont-div active"></div>
+                <div class="menupont-div">Cathode-Ray Tube Amusement Device</div>
+                <div class="menupont-div">Battlezone</div>
+                <div class="menupont-div">Nimrod</div>
+                <div class="menupont-div">OXO</div>
+            </div>
         </div>
     </div>
     <br>
