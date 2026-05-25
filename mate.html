@@ -67,12 +67,21 @@
         .flex-szoveg {
         margin: 0;
         }
-         .vault-card {
-    transition: transform 0.3s ease, border-color 0.3s ease;
+ vault-card {
+  background: linear-gradient(135deg, #3b4870, #222640) !important;
+  border-radius: 12px;
+  padding: 30px !important; /* Ez a nagy padding fogja beljebb tolni a képet! */
+  border-left: 5px solid #00f3ff !important;
+  box-shadow: -6px 0px 18px rgba(0, 243, 255, 0.5);
+  color: #ffffff;
 }
-.vault-card:hover {
-    transform: translateY(-10px);
-    border-color: #640df0;
+
+.vault-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: block;
 }
         .jobb-kep {
     float: right;
