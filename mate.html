@@ -6,112 +6,94 @@
     <title>Régebbi játékok</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-       body {
-         background-image: linear-gradient(to bottom, rgba(127, 8, 207, 0.75), rgba(0, 94, 255, 0.63), rgba(74, 32, 210, 0.52), rgba(150, 77, 214, 0.38));
-         background-attachment: fixed;
-         min-height: 100vh;
-         margin: 0;
-         padding: 0;
-         color: #e0e0e0;
-         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-         overflow-x: hidden;
-        }
-        .navbar {
-        background: rgba(20, 20, 20, 0.5) !important;
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px !important;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
-        margin-top: 15px;
-            }
-            .neon-left-card {
-        background: linear-gradient(135deg, #445378, #2b3252);
-        width: 500px;
-        height: 280px;
-        border-radius: 12px;
-        padding: 30px;
-        color: #a0aacc;
-        font-family: sans-serif;
-
-        h1{
-            text-align: center;
-            color: white;
-        }
-        p{
-            color: white;
-        }
-        a{
-            color: white;
-        }
-        .flex-kontener {
-        display: flex;
-        align-items: center;
-        gap: 20px; 
-        }
-        .flex-kep {
-        max-width: 200px;
-        height: auto;
-        }
-        h2{
-            color: white;
-        }
-        h4{
-            color: white;
-        }
-        h6{
-            color: white;
-            text-align: center;
-        }
-        li{
-            color: white;
-        }
-        h5{
-            color: white;
-        }
-        .flex-szoveg {
-        margin: 0;
-        }
- vault-card {
-  background: linear-gradient(135deg, #3b4870, #222640) !important;
-  border-radius: 12px;
-  padding: 30px !important; /* Ez a nagy padding fogja beljebb tolni a képet! */
-  border-left: 5px solid #00f3ff !important;
-  box-shadow: -6px 0px 18px rgba(0, 243, 255, 0.5);
-  color: #ffffff;
+      body {
+  background-image: linear-gradient(to bottom, rgba(127, 8, 207, 0.75), rgba(0, 94, 255, 0.63), rgba(74, 32, 210, 0.52), rgba(150, 77, 214, 0.38));
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-.vault-card img {
-  width: 100%;
+.navbar {
+  background: rgba(20, 20, 20, 0.5) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  margin-top: 15px;
+}
+
+/* Ki lett javítva a lezárás itt */
+.neon-left-card {
+  background: linear-gradient(135deg, #445378, #2b3252);
+  width: 500px;
+  height: 280px;
+  border-radius: 12px;
+  padding: 30px;
+  color: #a0aacc;
+  font-family: sans-serif;
+}
+
+/* Globális szövegstílusok */
+h1 { text-align: center; color: white; }
+h2 { color: white; }
+h4 { color: white; }
+h5 { color: white; }
+h6 { color: white; text-align: center; }
+p  { color: white; }
+a  { color: white; }
+li { color: white; }
+
+/* Elrendezések */
+.flex-kontener {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.flex-kep {
+  max-width: 200px;
   height: auto;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  display: block;
 }
-        .jobb-kep {
-    float: right;
-    margin-left: 15px;   
-    margin-bottom: 10px;   
-    width: 300px;
-    height: 300px;
+
+.flex-szoveg {
+  margin: 0;
 }
+
+.jobb-kep {
+  float: right;
+  margin-left: 15px;   
+  margin-bottom: 10px;   
+  width: 300px;
+  height: 300px;
+}
+
+/* A TE KÁRTYÁD - Javítva a pont az elején és összevonva a legjobb értékekkel */
 .vault-card {
-  
-  background: linear-gradient(135deg, #3b4870, #222640);
-  
-  border-radius: 12px;
-  
-  padding: 24px;
-  
-  border-left: 4px solid #00f3ff;
-  
+  background: linear-gradient(135deg, #3b4870, #222640) !important;
+  border-radius: 12px !important;
+  padding: 30px !important; /* Ez a nagy belső margó szépen eltolja a képet a szélétől! */
+  border-left: 5px solid #00f3ff !important;
   box-shadow: 
     -6px 0px 18px rgba(0, 243, 255, 0.5),      
     inset 4px 0px 12px rgba(0, 243, 255, 0.15),  
-    0px 8px 16px rgba(0, 0, 0, 0.3);             
- 
-  color: #ffffff;
+    0px 8px 16px rgba(0, 0, 0, 0.3) !important;              
+  color: #ffffff !important;
   font-family: sans-serif;
   margin-bottom: 15px; 
+}
+
+/* Kártyán belüli képek stílusa */
+.vault-card img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 6px !important;
+  margin-bottom: 15px !important;
+  display: block !important;
+}
 }
     </style>
 </head>
