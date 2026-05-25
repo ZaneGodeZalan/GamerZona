@@ -26,18 +26,18 @@
   margin-top: 15px;
 }
 
-/* Ki lett javítva a lezárás itt */
+
 .neon-left-card {
   background: linear-gradient(135deg, #445378, #2b3252);
   width: 500px;
   height: 280px;
   border-radius: 12px;
   padding: 30px;
-  color: #a0aacc;
+  color: #4d5c64;
   font-family: sans-serif;
 }
 
-/* Globális szövegstílusok */
+
 h1 { text-align: center; color: white; }
 h2 { color: white; }
 h4 { color: white; }
@@ -47,7 +47,7 @@ p  { color: white; }
 a  { color: white; }
 li { color: white; }
 
-/* Elrendezések */
+
 .flex-kontener {
   display: flex;
   align-items: center;
@@ -71,28 +71,44 @@ li { color: white; }
   height: 300px;
 }
 
-/* A TE KÁRTYÁD - Javítva a pont az elején és összevonva a legjobb értékekkel */
+
 .vault-card {
   background: linear-gradient(135deg, #3b4870, #222640) !important;
   border-radius: 12px !important;
   padding: 30px !important; /* Ez a nagy belső margó szépen eltolja a képet a szélétől! */
-  border-left: 5px solid #00f3ff !important;
+  border-left: 5px solid #6a2eb9 !important;
   box-shadow: 
-    -6px 0px 18px rgba(0, 243, 255, 0.5),      
-    inset 4px 0px 12px rgba(0, 243, 255, 0.15),  
+    -6px 0px 18px rgba(78, 3, 177, 0.5),      
+    inset 4px 0px 12px rgba(43, 5, 133, 0.15),  
     0px 8px 16px rgba(0, 0, 0, 0.3) !important;              
   color: #ffffff !important;
   font-family: sans-serif;
   margin-bottom: 15px; 
 }
 
-/* Kártyán belüli képek stílusa */
+
 .vault-card img {
   width: 100% !important;
   height: auto !important;
   border-radius: 6px !important;
   margin-bottom: 15px !important;
   display: block !important;
+}
+
+.magas-kártya {
+  height: 450px !important; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.magas-kártya img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover; 
+  border-radius: 6px !important;
+  margin-bottom: 15px !important;
 }
 
     </style>
@@ -129,15 +145,15 @@ li { color: white; }
     
     <div class="col-md-6">
       <div class="vault-card">
-        <h1>Battlezone</h1>
+        <h1>Battlezone(1998)</h1>
         <img src="img/battlezone.jpg" alt="battlezone">
-        <p>A battlezone játék valódi célja katonák kiképzése volt.</p>
+        <p>A battlezone játék valódi célja katonák kiképzése volt.Az első 3D-s Játék</p>
       </div>
     </div>
     
     <div class="col-md-6">
       <div class="vault-card">
-        <h1>Nimrod</h1>
+        <h1>Nimrod(1951)</h1>
         <img src="img/nimrod.jpg" alt="Nimrod">
         <p>Ez a játékot gyufaszálakkal játszották, azután megjelent 1951-ben egy másfél tonnás gépezetre.</p>
       </div>
@@ -162,37 +178,35 @@ li { color: white; }
     </div>
   </div>
 </div>
+<div class="container my-5">
+  <div class="row g-4">
+    
+    <div class="col-md-4">
+      <div class="vault-card tall-card">
+        <h5 class="text-info">Archívum #01</h5>
+        <hr class="border-secondary">
+        <p class="small text-muted">A korai hardverek és az elektroncsöves számítástechnika korszaka.</p>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="vault-card magas-kártya">
+        <h5 class="text-info">Archívum #02</h5>
+        <hr class="border-secondary">
+        <p class="small text-muted">A tranzisztorok megjelenése és a mikroszámítógépek forradalma.</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="vault-card magas-kártya">
+        <h5 class="text-info">Archívum #03</h5>
+        <hr class="border-secondary">
+        <p class="small text-muted">A modern 3D grafika, vektoros kijelzők és virtuális terek hajnala.</p>
+      </div>
+    </div>
 
-    <p>A legelső játék. Ezt az eszközt Thomas T. Goldsmith Jr. és Estle Ray Mann fizikusok találták fel 1947-ben (a szabadalmat 1948-ban hagyták jóvá). A fejlesztéshez a második világháború radar-technológiáját vették alapul, amelyet a kutatók jól ismertek.</p>
-    <h4>Hogyan működött?</h4>
-    <ol>
-        <li>A kijelző: Egy katódsugárcsövet (CRT) használtak, amelyen egy fénypont (az elektronnyaláb) reprezentálta a "rakétát"</li>
-        <li>Az irányítás: A játékos analóg tekerőgombokkal (potenciométerekkel) állíthatta be a fénypont röppályáját és sebességét.</li>
-        <li>A cél: A fénypontot egy meghatározott pontra (a célpontra) kellett irányítani.</li>
-        <li>Grafika helyett maszkok: Mivel a gép nem tudott összetett grafikát rajzolni, átlátszó papírmaszkokat vagy acetátlemezeket helyeztek a képernyő elé, amelyeken repülőgépek vagy más célpontok voltak láthatók.</li>
-    </ol>
-    <p>Ennek ugyan nem lett nagy sikere ugyan mert nem tartalmazott memóriát, processzort se programkódot tehát teljesen analóg volt.</p>
-    <h2>Nimrod</h2>
-    <p>A nimrod játékot egy Brit Ferranti nevezetű cég alapította 1951-ben. Tervezője Jhon Makepeace Bennett volt. Ez a játék egy számítógépes játék volt amelyet a számítógép történetének egyik első kereskedelmi célú számítógépére, a Ferranti Mark 1-re fejlesztettek ki. A Nimrod egy stratégiai játék volt, amelyben a játékosoknak egy halom gyufaszálat kellett eltávolítaniuk, és az nyert, aki utoljára húzott.</p> 
-    <img src="img/nimrod.jpg" alt="Nimrod játék/gép" title="Nimrod játék/gép">
-    <br>
-    <h5>játékmenet:</h5>
-    <ol>
-        <li>A játékban több kupac tárgy (például gyufaszál) van.</li>
-        <li>A játékosok felváltva vesznek el tetszőleges számú tárgyat, de csak egy kupacból.</li>
-        <li>A cél változattól függően vagy az utolsó tárgy elvétele, vagy annak elkerülése (misere játék).</li>
-    </ol>
-    <h2>Battlezone</h2>
-    <p>A Battlezone játékot a Midway Manufacturing cég fejlesztette 1973-ban. Ez volt az egyik első 3D-s játék, amely a későbbiekben sokat befolyásolt a játékok fejlődésében.</p>
-    <img src="img/battlezone.jpg" alt="Battlezone" title="Battlezone">
-    <br>
-    <h4>különlegessége:</h4>
-    <p>A Battlezone játék különlegessége az volt, hogy az első 3D-s játék volt, amely a későbbiekben sokat befolyásolt a játékok fejlődésében.</p>
-    <ol>
-        <li>Vektorgrafika: A korabeli játékokkal ellentétben (amik színes négyzetekből, azaz pixelekből álltak) a Battlezone úgynevezett wireframe (drótvázas) vektorgrafikát használt. A tankokat és a környezetet világító zöld vonalak rajzolták ki egy fekete háttér előtt.</li>
-        <li>Periszkópos nézet: Az eredeti arcade kabinet egyik változatánál a játékosnak egy fizikai „periszkópba” kellett belenéznie, ami teljesen elzárta a külvilágot, megteremtve ezzel a virtuális valóság (VR) korai élményét.</li>
-        <li>Irányítás: Két botkormánnyal (joystick) kellett irányítani, pontosan úgy, mint egy valódi lánctalpas tankot (az egyik kar a bal, a másik a jobb lánctalpat vezérelte).</li>
-    </ol>
+  </div>
+</div>
      <!--Lábléc-->
     <div class="container-fluid bg-dark text-light text-center p-3">
         <p class="m-0">Kapcsolat: +36 067 6767 | A web a Kandó tulajdona, amely oktatási célal jött létre | © 2026ban minden jog Fenttartva</p>
