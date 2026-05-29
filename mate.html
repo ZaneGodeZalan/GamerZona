@@ -3,219 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Régebbi játékok</title>
+    <title>Gamer bar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      body {
-  background-image: linear-gradient(to bottom, rgba(127, 8, 207, 0.75), rgba(0, 94, 255, 0.63), rgba(74, 32, 210, 0.52), rgba(150, 77, 214, 0.38));
-  background-attachment: fixed;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  color: #e0e0e0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  overflow-x: hidden;
-}
+        body {
+            background-image: linear-gradient(to bottom, rgba(127, 8, 207, 0.75), rgba(0, 94, 255, 0.63), rgba(74, 32, 210, 0.52), rgba(150, 77, 214, 0.38));
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            overflow-x: hidden;
+        }
 
-.navbar {
-  background: rgba(20, 20, 20, 0.5) !important;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
-  margin-top: 15px;
-}
+        .navbar {
+            background: rgba(20, 20, 20, 0.5) !important;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px !important;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+            margin-top: 15px;
+        }
 
+        .hero-banner {
+            width: 100%;
+            height: 450px; 
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                        url('img/bar.png') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
 
-.neon-left-card {
-  background: linear-gradient(135deg, #445378, #2b3252);
-  width: 500px;
-  height: 280px;
-  border-radius: 12px;
-  padding: 30px;
-  color: #4d5c64;
-  font-family: sans-serif;
-}
+        .neon-left-card {
+            background: linear-gradient(135deg, #445378, #2b3252);
+            width: 500px;
+            height: 280px;
+            border-radius: 12px;
+            padding: 30px;
+            color: #4d5c64;
+            font-family: sans-serif;
+        }
 
+        h1 { text-align: center; color: white; }
+        h2 { color: white; }
+        h4 { color: white; }
+        h5 { color: white; }
+        h6 { color: white; text-align: center; }
+        p  { color: white; }
+        a  { color: white; }
+        li { color: white; }
 
-h1 { text-align: center; color: white; }
-h2 { color: white; }
-h4 { color: white; }
-h5 { color: white; }
-h6 { color: white; text-align: center; }
-p  { color: white; }
-a  { color: white; }
-li { color: white; }
+        .flex-kontener {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+        }
 
+        .flex-kep {
+            max-width: 200px;
+            height: auto;
+        }
 
-.flex-kontener {
-  display: flex;
-  align-items: center;
-  gap: 20px; 
-}
+        .flex-szoveg {
+            margin: 0;
+        }
 
-.flex-kep {
-  max-width: 200px;
-  height: auto;
-}
+        .jobb-kep {
+            float: right;
+            margin-left: 15px;   
+            margin-bottom: 10px;   
+            width: 300px;
+            height: 300px;
+        }
 
-.flex-szoveg {
-  margin: 0;
-}
+        .vault-card {
+            background: linear-gradient(135deg, #3b4870, #222640) !important;
+            border-radius: 12px !important;
+            padding: 30px !important;
+            border-left: 5px solid #6a2eb9 !important;
+            box-shadow: 
+                -6px 0px 18px rgba(78, 3, 177, 0.5),      
+                inset 4px 0px 12px rgba(43, 5, 133, 0.15),  
+                0px 8px 16px rgba(0, 0, 0, 0.3) !important;              
+            color: #ffffff !important;
+            font-family: sans-serif;
+            margin-bottom: 15px; 
+        }
 
-.jobb-kep {
-  float: right;
-  margin-left: 15px;   
-  margin-bottom: 10px;   
-  width: 300px;
-  height: 300px;
-}
+        .vault-card img {
+            width: 100% !important;
+            height: auto !important;
+            border-radius: 6px !important;
+            margin-bottom: 15px !important;
+            display: block !important;
+        }
 
+        .magas-kártya {
+            height: 480px !important; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
 
-.vault-card {
-  background: linear-gradient(135deg, #3b4870, #222640) !important;
-  border-radius: 12px !important;
-  padding: 30px !important; /* Ez a nagy belső margó szépen eltolja a képet a szélétől! */
-  border-left: 5px solid #6a2eb9 !important;
-  box-shadow: 
-    -6px 0px 18px rgba(78, 3, 177, 0.5),      
-    inset 4px 0px 12px rgba(43, 5, 133, 0.15),  
-    0px 8px 16px rgba(0, 0, 0, 0.3) !important;              
-  color: #ffffff !important;
-  font-family: sans-serif;
-  margin-bottom: 15px; 
-}
-
-
-.vault-card img {
-  width: 100% !important;
-  height: auto !important;
-  border-radius: 6px !important;
-  margin-bottom: 15px !important;
-  display: block !important;
-}
-
-.magas-kártya {
-  height: 450px !important; 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-
-.magas-kártya img {
-  width: 100% !important;
-  height: 180px !important;
-  object-fit: cover; 
-  border-radius: 6px !important;
-  margin-bottom: 15px !important;
-}
-
+        .magas-kártya img {
+            width: 100% !important;
+            height: 180px !important;
+            object-fit: cover; 
+            border-radius: 6px !important;
+            margin-bottom: 0 !important;
+        }
     </style>
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Főoldal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="zalan.html">Indie játékok</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="kornel.html">Competetiv gaming</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="mate.html">Jani</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Easter egg :D</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <h1>Üdvözlöm a weboldalamon!</h1>
-    <h6>ezen a weboldalon megtekintheti játékok fejlődését.</h6>
-    <br>
-    <br><div class="container my-5">
-  <div class="row g-4">
-    
-    <div class="col-md-6">
-      <div class="vault-card">
-        <h1>Battlezone(1998)</h1>
-        <img src="img/battlezone.jpg" alt="battlezone">
-        <p>A battlezone játék valódi célja katonák kiképzése volt.Az első 3D-s Játék</p>
-      </div>
-    </div>
-    
-    <div class="col-md-6">
-      <div class="vault-card">
-        <h1>Nimrod(1951)</h1>
-        <img src="img/nimrod.jpg" alt="Nimrod">
-        <p>Ez a játékot gyufaszálakkal játszották, azután megjelent 1951-ben egy másfél tonnás gépezetre.</p>
-      </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Főoldal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="zalan.html">Indie játékok</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kornel.html">Competetiv gaming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mate.html">Jani</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Easter egg :D</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
-  </div>
-</div>
-<div class="row mt-5">
-  <div class="col-12">
-    <div class="vault-card text-center py-4">
-      <h4 class="mb-3 text-info">A digitális katona képző és a digitális gyermekkori játék</h4>
-      <p class="lead text-light">
-        Az 1951-es Nimrod és az 1980-as Battlezone közötti közel három évtized a számítástechnika legmeghatározóbb időszaka volt. 
-        Ami egykor egy másfél tonnás, kizárólag matematikai logikai játékra épülő monstrummal kezdődött, az alig harminc évvel 
-        később már az amerikai hadsereg harckocsizóinak taktikai kiképzőeszközévé nőtte ki magát.
-      </p>
-      <hr class="border-secondary my-3" style="opacity: 0.3;">
-      <p>
-        Ez a fejlődés jól mutatja, hogyan váltak a korai, kezdetleges kísérleti gépezetek a modern, 
-        háromdimenziós szimulációk és a mai értelemben vett videójáték-ipar közvetlen elődjeivé.
-      </p>
+    <div class="hero-banner mt-4">
+        <h1>GAMER BAR</h1>
     </div>
-  </div>
-</div>
-<div class="container my-5">
-  <div class="row g-4">
-    
-    <div class="col-md-4">
-      <div class="vault-card magas-kártya">
-        <h5 class="text-info">Gép monstrumok</h5>
-        <hr class="border-secondary">
-        <ol>
-        <li >Méretek: Körülbelül 3,6 méter széles, 1,5 méter mély és 2,7 méter magas volt.</il>
-        <li >Súly: Több mint 1,5 tonnát nyomott (ez egy nagyobb személyautó súlya).</li>
-        <li >Fogyasztás: Rengeteg áramot evett, és olyan hőt termelt, mint egy ipari fűtőtest.</li>
-        </ol>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="vault-card">
+                    <h1>Leírás az ételekről</h1>
+                    <p style="text-align: center;">Felhívom figyelmüket az alábbi ételek nagyon sok kalóriát tartalmaznak</p>
+                    <p style="text-align: center;">Elfogyasztásuk után tornát javaslunk</p>
+                    <p style="text-align: center;">Az ételeket helyben kell elfogyasztani frissességük megőrzése érdekében</p>
+                    <p style="text-align: center;">A bárban több elfoglaltságot is találnak míg várnak</p>
+                    <p style="text-align: center;">Jó szórakozást!</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="vault-card">
+                    <h1>Ételek méretei</h1>
+                    <p><strong>Pizza</strong></p>
+                    <ol>
+                        <li>26cm - 2800 Ft</li>
+                        <li>32cm - 3400 Ft</li>
+                        <li>38cm - 4000 Ft</li>
+                    </ol>
+                    <p><strong>Gyros</strong></p>
+                    <ol>
+                        <li>Gyros pitában - 3000 Ft</li>
+                        <li>Gyrostál - 2900 Ft</li>
+                    </ol>
+                    <p><strong>Burger</strong></p>
+                    <ol>
+                        <li>Burger - 2500 Ft</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <div class="col-md-4">
-      <div class="vault-card magas-kártya">
-        <h5 class="text-info">Árak akkoriban</h5>
-        <hr class="border-secondary">
-        <p>Egy Gép kb. 1-8 Millio forintba került</p>
-        <p>dollárba nézve az árakat 3500 dollár egy ekkora gép előállitása</p>
-        <p>az árrak azért ekkorák mert túl sok alapanyagot használtak fel elkészitésükhöz</p>
-      </div>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="vault-card magas-kártya">
+                    <div>
+                        <h5 class="text-info">Gémer burger</h5>
+                        <hr class="border-secondary">
+                        <p style="text-align: center;">Ár: 2500 Ft</p>
+                        <p style="text-align: center;">Tartalma: sajt, húspogácsa, saláta, paradicsom, uborka, bacon</p>
+                        <p style="text-align: center; font-style: italic;" class="text-warning">Üdítő ingyenesen jár a burger mellé!</p>
+                    </div>
+                    <img src="img/Burger.png" alt="burger" title="burger">
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="vault-card magas-kártya">
+                    <div>
+                        <h5 class="text-info">Gamer gyros</h5>
+                        <hr class="border-secondary">
+                        <p style="text-align: center;">Ár: 3000 Ft</p>
+                        <p style="text-align: center;">Tartalma: sajt, marha/csirkehús, saláta, szószok, zöldségek</p>
+                        <p style="text-align: center;">A feltéteket a vendég választja ki!</p>
+                    </div>
+                    <img src="img/gyros.png" alt="gyros">
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="vault-card magas-kártya">
+                    <div>
+                        <h5 class="text-info">Gamer pizza</h5>
+                        <hr class="border-secondary">
+                        <p style="text-align: center;">Ár: 2800-4000 Ft</p>
+                        <p style="text-align: center;">Tartalma: sajt, szalámi, sonka, szószok, zöldségek</p>
+                        <p style="text-align: center;">Mérettől függ a fizetendő összeg</p>
+                    </div>
+                    <img src="img/pizza.png" alt="pizza"> </div>
+            </div>
+        </div>
     </div>
-    
-    <div class="col-md-4">
-      <div class="vault-card magas-kártya">
-        <h5 class="text-info">Mai gépek vagy a régi gépek a jobbak</h5>
-        <hr class="border-secondary">
-        <p>Nos hát egyértelműen a mai gépek erősebbek és több dologra képesek de a régi gépek akkoriban csodának tűntek. </p>
-        <p>a mai gépek sokkal kissebbek mint azok a monstrumok</p>
-      </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="vault-card text-center py-4">
+                    <h4 class="mb-3 text-info">A digitális katona képző és a digitális gyermekkori játék</h4>
+                    <p class="lead text-light">
+                        Az 1951-es Nimrod és az 1980-as Battlezone közötti közel három évtized a számítástechnika legmeghatározóbb időszaka volt. 
+                        Ami egykor egy másfél tonnás, kizárólag matematikai logikai játékra épülő monstrummal kezdődött, az alig harminc évvel 
+                        később már az amerikai hadsereg harckocsizóinak taktikai kiképzőeszközévé nőtte ki magát.
+                    </p>
+                    <hr class="border-secondary my-3" style="opacity: 0.3;">
+                    <p>
+                        Ez a fejlődés jól mutatja, hogyan váltak a korai, kezdetleges kísérleti gépezetek a modern, 
+                        háromdimenziós szimulációk és a mai értelemben vett videójáték-ipar közvetlen elődjeivé.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-     <!--Lábléc-->
-    <div class="container-fluid bg-dark text-light text-center p-3">
-        <p class="m-0">Kapcsolat: +36 067 6767 | A web a Kandó tulajdona, amely oktatási célal jött létre | © 2026ban minden jog Fenttartva</p>
+
+    <div class="container-fluid bg-dark text-light text-center p-3 mt-5">
+        <p class="m-0">Kapcsolat: +36 067 6767 | A web a Kandó tulajdona, amely oktatási céllal jött létre | © 2026-ban minden jog fenntartva</p>
     </div>
 </body>
 </html>
