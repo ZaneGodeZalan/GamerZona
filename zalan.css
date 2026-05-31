@@ -156,3 +156,57 @@ body {
     background: #0dcaf0;
     box-shadow: 0 0 10px #0dcaf0;
 }
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0b0b0d;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.spinner-cyber {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(13, 202, 240, 0.2);
+    border-radius: 50%;
+    border-top-color: #0dcaf0;
+    border-bottom-color: #8a2be2;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loader-text {
+    letter-spacing: 3px;
+    font-family: 'Fira Code', monospace;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.tracking-widest {
+    letter-spacing: 6px;
+}
+
+.hack-success {
+    color: #00ff46 !important;
+    text-shadow: 0 0 15px rgba(0, 255, 70, 0.8) !important;
+}
+
+.hack-fail {
+    color: #ff0055 !important;
+    text-shadow: 0 0 15px rgba(255, 0, 85, 0.8) !important;
+}

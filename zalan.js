@@ -26,7 +26,6 @@ const indieData = {
     }
 };
 
-// Első betöltés automatizálása
 function initPage() {
     const firstBtn = document.querySelector('.list-btn');
     if(firstBtn) {
@@ -52,7 +51,6 @@ function showIndie(key, element) {
     }
 }
 
-// Eredeti hírek tárolása a visszaállításhoz (így nem kell az oldalt újratölteni)
 const newsFirstPage = {
     1: { title: "Hades II Bővítés", text: "Hatalmas frissítést jelentettek be az Early Access verzióhoz. Új fegyverek érkeznek..." },
     2: { title: "Silksong Jelek", text: "A Team Cherry adatbázis-frissítéseket végzett. Új mechanikák szivárogtak ki a mozgásról..." },
@@ -86,3 +84,110 @@ function flipNews(id) {
     }, 300);
 }
 
+function initPage() {
+    const firstBtn = document.querySelector('.list-btn');
+    if(firstBtn) {
+        showIndie('hollow', firstBtn);
+    }
+    setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        if(preloader) {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+        }
+    }, 1000);
+}
+
+let generatedCode = "";
+
+function startHack() {
+    const display = document.getElementById('hackCodeDisplay');
+    const input = document.getElementById('hackInput');
+    const submitBtn = document.getElementById('hackSubmitBtn');
+    const startBtn = document.getElementById('hackStartBtn');
+    const status = document.getElementById('hackStatus');
+
+    status.innerText = "";
+    display.classList.remove('hack-success', 'hack-fail');
+    input.value = "";
+    startBtn.disabled = true;
+    const chars = "ABCDEF0123456789X";
+    let part1 = chars[Math.floor(Math.random() * chars.length)] + chars[Math.floor(Math.random() * chars.length)];
+    let part2 = chars[Math.floor(Math.random() * chars.length)] + chars[Math.floor(Math.random() * chars.length)] + chars[Math.floor(Math.random() * chars.length)];
+    generatedCode = `${part1}-${part2}`;
+    display.innerText = generatedCode;
+
+    setTimeout(() => {
+        display.innerText = "******";
+        input.disabled = false;
+        submitBtn.disabled = false;
+        input.focus();
+        status.innerText = "Szenzorok lekapcsolva. GÉPELJ!";
+        status.className = "text-warning d-block mt-2 fw-bold";
+    }, 1500);
+}
+
+function checkHackCode() {
+    const input = document.getElementById('hackInput');
+    const display = document.getElementById('hackCodeDisplay');
+    const submitBtn = document.getElementById('hackSubmitBtn');
+    const startBtn = document.getElementById('hackStartBtn');
+    const status = document.getElementById('hackStatus');
+    const successAudio = new Audio('audio/success.mp3');
+    const userGuess = input.value.trim().toUpperCase();
+
+    input.disabled = true;
+    submitBtn.disabled = true;
+    startBtn.disabled = false;
+
+    if (userGuess === generatedCode) {
+        display.innerText = "ACCESS GRANTED";
+        display.classList.add('hack-success');
+        status.innerText = "✓ SIKERES BEHATOLÁS! Feltörted a rendszert.";
+        status.className = "text-success d-block mt-2 fw-bold";
+        successAudio.play();
+
+    } else {
+        display.innerText = "ACCESS DENIED";
+        display.classList.add('hack-fail');
+        status.innerText = `✗ RECOGNITION ERROR! A helyes kód ez volt: ${generatedCode}`;
+        status.className = "text-danger d-block mt-2 fw-bold";
+        playCyberFailSound();
+    }
+}
+
+function playCyberSuccessSound() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    const notes = [523.25, 659.25, 783.99];
+    let time = audioCtx.currentTime;
+
+    notes.forEach((freq, index) => {
+        const osc = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, time);
+        gainNode.gain.setValueAtTime(0.15, time);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, time + 0.15);
+        osc.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        osc.start(time);
+        osc.stop(time + 0.15);
+        time += 0.08;
+    });
+}
+
+function playCyberFailSound() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+    osc.frequency.linearRampToValueAtTime(80, audioCtx.currentTime + 0.3); 
+    gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+    osc.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.3);
+}
