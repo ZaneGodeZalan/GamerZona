@@ -199,48 +199,46 @@ th {
       </div>
       </div>
       <!-- hirek -->
-       <div class="col-sm-6">
-          <h1>Újonnan érkező tech trendek</h1>
-          <h5>A grafikus motorok új generációja:</h5>
-          <div
-            class="p-3 bg-secondary bg-opacity-25 rounded mb-3 text-white border border-info"
-          >
-            <h6 class="fw-bold text-info">KIEMELT HÍR: Lan CS2 Versenyek</h6>
-            <p class="small m-0">
-             5v5 és 2v2 Wingman Lan bajnokság lesz itt a Gamer Zónában 2067.06.07-ikén
-            </p>
-          </div>
-          <p>
-          a 3. helyezet a Six-sevenes mercheinkbol vihet el 3db-t ingyen
-          </p>
-          <p>
-            a 2. helyezet egy boilert vihet haza (kevéssé használt és nem lopott)
-          </p>
-          <p>
-           az 1. helyezet 67 ezer forintot fejenként és egy Mikrót vihet haza
-          </p>
+Ahhoz, hogy az oldalad egységes és rendezett legyen, a legfontosabb lépés a Bootstrap grid rendszerének (row/col) helyes használata, valamint a szöveges blokkok kártyákba (vagy konzisztens konténerekbe) szervezése.
 
-          <h2 class="mt-5">Budapest Major Hírek</h2>
-          <h5>Frissítve 6-7 nappal ezelőtt.</h5>
-          <div
-            class="p-3 bg-dark bg-opacity-50 rounded mb-3 border border-secondary text-light"
-          >
-            <span class="badge bg-danger mb-2">Budapest Major 2026</span>
-            <p class="m-0 fw-bold">
-              Telt ház a Papp László Arénában: A döntőben a világ legjobb csapatai mérik össze tudásukat a 2026-os budapesti CS2 Major trófeájáért.
-            </p>
-         <span class="badge bg-primary mb-2">Elemzés</span>
-    <p class="m-0 fw-bold">
-        Új rekord: Sosem látott nézőszámot generált a budapesti esemény, amellyel a magyar e-sport végleg felkerült a világtérképre.
-    </p>
-</div>
-          <p>
-            A modder közösségek kitartó munkájának köszönhetően a régebbi
-            klasszikus játékok is teljesen új textúrákat és küldetéseket kapnak,
-            így évek múltán is érdemes őket elővenni.
-          </p>
+A jelenlegi kódodban a "Budapest Major Hírek" kicsit "össze van zsúfolva" a tech hírekkel. Javaslom, hogy a "Tech Trendek" és a "Budapest Major" tartalmakat külön-külön vault-card típusú dobozokba tedd, így tökéletesen fognak passzolni a már meglévő 6 kártyás elrendezésedhez.
+
+A javasolt, rendezett kód:
+HTML
+<div class="row">
+    <div class="col-md-6">
+        <div class="vault-card h-100">
+            <h2 class="neon-text-blue">Újonnan érkező tech trendek</h2>
+            <h5 class="text-white">A grafikus motorok új generációja:</h5>
+            <hr class="border-light">
+            <div class="p-3 bg-dark bg-opacity-50 rounded mb-3 border border-info">
+                <h6 class="fw-bold text-info">KIEMELT HÍR: Lan CS2 Versenyek</h6>
+                <p class="small m-0 text-light">5v5 és 2v2 Wingman Lan bajnokság lesz a Gamer Zónában 2067.06.07-én.</p>
+            </div>
+            <ul class="text-light">
+                <li><strong>3. helyezett:</strong> 3db exkluzív Six-sevenes merch.</li>
+                <li><strong>2. helyezett:</strong> Egy "kíméletesen használt" boiler.</li>
+                <li><strong>1. helyezett:</strong> 67 000 Ft/fő és egy prémium Mikró.</li>
+            </ul>
         </div>
-      </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="vault-card h-100">
+            <h2 class="neon-text-blue">Budapest Major Hírek</h2>
+            <h5 class="text-white">Frissítve: 2026. Május 31.</h5>
+            <hr class="border-light">
+            <div class="mb-3">
+                <span class="badge bg-danger mb-2">Budapest Major 2026</span>
+                <p class="text-light fw-bold">Telt ház a Papp László Arénában: A világ legjobb csapatai küzdenek a trófeáért.</p>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-primary mb-2">Elemzés</span>
+                <p class="text-light fw-bold">Új rekord: A magyar e-sport végleg felkerült a világtérképre.</p>
+            </div>
+        </div>
+    </div>
+</div>
       <!-- hirek vége-->
  <!-- kártya Start-->
     <div class="container my-4">
