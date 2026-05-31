@@ -1,7 +1,7 @@
 const indieData = {
     'hollow': {
         name: "Hollow Knight",
-        desc: "A Hollow Knight egy gyönyörűen megrajzolt akció-kalandjáték, amely egy hatalmas, összefüggő rovarvilágban játszódik. A játékosok egy névtelen lovagot irányítanak, aki Hallownest romos királyságát fedezi fel a mélyben. A játék híres a precíz irányításáról, a rendkívül nehéz boss harcairól és a melankolikus hangulatáról. Minden egyes terület sajátos atmoszférával és titkokkal rendelkezik, amelyek fokozatosan fedik fel a birodalom bukásának történetét. Ez a metroidvania az indie fejlesztés egyik legalapvetőbb remekműve.",
+        desc: "A Hollow Knight egy gyönyörűen megrajzolt akció-kalandjáték, amely egy hatalmas, összefüggő rovarvilágban játszódik. A játékosok egy névtelen lovagot irányítanak, ami Hallownest romos királyságát fedezi fel a mélyben. A játék híres a precíz irányításáról, a rendkívül nehéz boss harcairól és a melankolikus hangulatáról. Minden egyes terület sajátos atmoszférával és titkokkal rendelkezik, amelyek fokozatosan fedik fel a birodalom bukásának történetét. Ez a metroidvania az indie fejlesztés egyik legalapvetőbb remekműve.",
         img: "img/hollowKinght.jpg"
     },
     'stardew': {
@@ -16,7 +16,7 @@ const indieData = {
     },
     'celeste': {
         name: "Celeste",
-        desc: "A Celeste egy kőkemény, mégis hihetetlenül inspiráló precíziós platformer játék, amely Madeline történetét meséli el. A fiatal lány elhatározza, hogy megmássza a rejtélyes Celeste-hegyet, miközben saját belső démonaival, a szorongással és a bizonytalansággal is meg kell küzdenie. A játékmenet rendkívül letisztult, de komoly ügyességet követel meg: ugrás, mászás és a levegőben való lökődés segítségével kell navigálnunk. A zseniális szinttervezés és a gyönyörű, érzelmes zenei aláfestés miatt ez a játék felejthetetlen élmény.",
+        desc: "A Celeste egy kőkemény, mégis hihetetlenül inspiráló precíziós platformer játék, amely Madeline történetét meséli el. A fital lány elhatározza, hogy megmássza a rejtélyes Celeste-hegyet, miközben saját belső démonaival, a szorongással és a bizenytalansággal is meg kell küzdenie. A játékmenet rendkívül letisztult, de komoly ügyességet követel meg: ugrás, mászás és a levegőben való lökődés segítségével kell navigálnunk. A zseniális szinttervezés és a gyönyörű, érzelmes zenei aláfestés miatt ez a játék felejthetetlen élmény.",
         img: "img/celeste.jpg"
     },
     'outer': {
@@ -25,6 +25,14 @@ const indieData = {
         img: "img/outerwilds.jpg"
     }
 };
+
+// Első betöltés automatizálása
+function initPage() {
+    const firstBtn = document.querySelector('.list-btn');
+    if(firstBtn) {
+        showIndie('hollow', firstBtn);
+    }
+}
 
 function showIndie(key, element) {
     const content = document.getElementById('indieContent');
@@ -44,25 +52,24 @@ function showIndie(key, element) {
     }
 }
 
+// Eredeti hírek tárolása a visszaállításhoz (így nem kell az oldalt újratölteni)
+const newsFirstPage = {
+    1: { title: "Hades II Bővítés", text: "Hatalmas frissítést jelentettek be az Early Access verzióhoz. Új fegyverek érkeznek..." },
+    2: { title: "Silksong Jelek", text: "A Team Cherry adatbázis-frissítéseket végzett. Új mechanikák szivárogtak ki a mozgásról..." },
+    3: { title: "Manor Lords Siker", text: "Az egyetlen fejlesztő által összerakott középkori stratégia letarolta az eladási listákat..." }
+};
+
 const newsSecondPage = {
-    1: {
-        title: "Hades II: Új Olympus Update",
-        text: "A belsős források szerint az új frissítéssel érkezik egy teljesen új fegyver, két eddig nem látott olümposzi patrónus, valamint a sztori mód folytatása."
-    },
-    2: {
-        title: "Silksong: A fizika átalakul",
-        text: "A legújabb tesztfázisban a fejlesztők finomítottak a hálóvetési mechanikákon, amivel minden eddiginél gyorsabbá válik a vertikális harcrendszer."
-    },
-    3: {
-        title: "Manor Lords: Folytatás",
-        text: "A fejlesztő bejelentette, hogy a bevétel jelentős részét a stúdió bővítésére és egy teljesen új ostrommechanika lefejlesztésére fordítja."
-    }
+    1: { title: "Hades II: Új Olympus Update", text: "A belsős források szerint az új frissítéssel érkezik egy teljesen új fegyver, két eddig nem látott olümposzi patrónus, valamint a sztori mód folytatása." },
+    2: { title: "Silksong: A fizika átalakul", text: "A legújabb tesztfázisban a fejlesztők finomítottak a hálóvetési mechanikákon, amivel minden eddiginél gyorsabbá válik a vertikális harcrendszer." },
+    3: { title: "Manor Lords: Folytatás", text: "A fejlesztő bejelentette, hogy a bevétel jelentős részét a stúdió bővítésére és egy teljesen új ostrommechanika lefejlesztésére fordítja." }
 };
 
 function flipNews(id) {
     const card = document.getElementById(`news-card-${id}`);
     const content = card.querySelector('.news-content');
     const button = card.querySelector('.btn-neon-mini');
+    
     content.classList.add('fade-out');
     
     setTimeout(() => {
@@ -71,8 +78,11 @@ function flipNews(id) {
             content.querySelector('.news-text').innerText = newsSecondPage[id].text;
             button.innerText = "<< VISSZA";
         } else {
-            location.reload();
+            content.querySelector('h5').innerText = newsFirstPage[id].title;
+            content.querySelector('.news-text').innerText = newsFirstPage[id].text;
+            button.innerText = "RÉSZLETEK >>";
         }
         content.classList.remove('fade-out');
     }, 300);
 }
+

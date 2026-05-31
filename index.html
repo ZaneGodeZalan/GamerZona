@@ -29,9 +29,45 @@
       </div>
     </div>
 
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-info">
+          <div class="modal-header">
+            <h5 class="modal-title text-info">Asztal & Gép Foglalás 🕹️</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form onsubmit="foglalasKezelo(event)">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label class="form-label text-light">Neved</label>
+                <input type="text" class="form-control bg-dark text-white border-secondary" required placeholder="Pl. Kovács Gábor">
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-light">Mit szeretnél foglalni?</label>
+                <select class="form-select bg-dark text-white border-secondary">
+                  <option>Sima bar asztal (Társasozáshoz / Italozáshoz)</option>
+                  <option>VIP PC Box (High-End PC-k)</option>
+                  <option>PlayStation 5 / Xbox kanapé szekció</option>
+                  <option>Retro Arcade sarok</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-light">Időpont</label>
+                <input type="datetime-local" class="form-control bg-dark text-white border-secondary" required>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Mégse</button>
+              <button type="submit" class="btn btn-sm btn-info text-dark fw-bold">Foglalás elküldése</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <div class="container-fluid">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Főoldal</a>
           </li>
@@ -45,6 +81,7 @@
             <a class="nav-link disabled" href="#">Jani</a>
           </li>
         </ul>
+        <button class="btn btn-sm btn-outline-info fw-bold px-3 ms-2" data-bs-toggle="modal" data-bs-target="#bookingModal">FOGLALÁS</button>
       </div>
     </nav>
 
@@ -106,9 +143,28 @@
       <div class="row justify-content-center mt-3 mx-1">
         <div class="col-12 col-md-10 p-4 bg-dark bg-opacity-50 text-white border border-secondary" style="border-radius: 20px; backdrop-filter: blur(8px);">
           <h3 class="text-info fw-bold mb-3">Gamer Bar & Szórakozóhely</h3>
-          <p class="m-0 text-light" style="font-style: normal; font-size: 1.05rem; line-height: 1.6;">
+          <p class="mb-4 text-light" style="font-style: normal; font-size: 1.05rem; line-height: 1.6;">
             A Gamer Zóna nem csupán egy magazin, hanem a város legmenőbb <strong>Gamer Bar</strong>-ja! Nálunk a prémium italok és finom falatok mellett a legújabb next-gen konzolok, high-end PC-k és klasszikus arcade játékgépek várnak rád. Ugorj le hozzánk a barátaiddal, kövesd a legnagyobb E-Sport közvetítéseket óriáskivetítőkön, vagy nevezz be a heti rendszerességű házi versenyeinkre!
           </p>
+
+          <div class="row g-3 text-start mt-2">
+            <div class="col-12 col-sm-6">
+              <div class="p-3 bg-secondary bg-opacity-25 rounded border border-secondary text-center">
+                <h6 class="text-info fw-bold">🕒 NYITVATARTÁS</h6>
+                <p class="small m-0 text-white-50" style="font-style: normal;">Hétfő - Csütörtök: 14:00 - 22:00</p>
+                <p class="small m-0 text-light fw-bold" style="font-style: normal;">Péntek - Szombat: 14:00 - 02:00</p>
+                <p class="small m-0 text-white-50" style="font-style: normal;">Vasárnap: 12:00 - 20:00</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="p-3 bg-secondary bg-opacity-25 rounded border border-secondary text-center d-flex flex-column justify-content-center h-100">
+                <h6 class="text-info fw-bold">📍 HOL TALÁLSZ MINKET?</h6>
+                <p class="small m-0 text-light" style="font-style: normal;">KKSZKI sugárút 42, Miskolc</p>
+                <p class="small m-0 text-white-50 mt-1" style="font-style: normal;">Garantált parkolóhelyek és jó hangulat!</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

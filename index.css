@@ -68,3 +68,21 @@ p {
     padding-left: 30px !important;
     color: white;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(20, 20, 20, 1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(138, 43, 226, 0.6);
+    border-radius: 5px;
+    border: 2px solid rgba(20, 20, 20, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0dcaf0;
+    box-shadow: 0 0 10px #0dcaf0;
+}

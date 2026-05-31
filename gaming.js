@@ -16,7 +16,7 @@ const jatekAdatok = {
     },
     'rdr': {
         cim: "Red Dead Redemption 2",
-        leiras: "Ez a western eposz Arthur Morgan és a Van der Linde banda utolsó napjait meséli el a vadnyugat alkonyán. A Rockstar Games eddigi legrészletesebb világa elképesztő vizualitással és egy hihetetlenül élő ökoszisztémával várja a felfedezőket. A lassabb tempójú, karakterközpontú történetvezetés mély érzelmi hatást gyakorol a játékosra, miközben erkölcsi döntéseket kell hoznia. A vadászat, a horgászat és a tábori élet apró részletei mind hozzájárulnak ahhoz, hogy valóban egy 19. századi törvényen kívüli bőrében érezzük magunkat. Nem csupán egy játékról, hanem egy interaktív művészeti alkotásról van szó, amely felejthetetlen élményt nyújt.",
+        leiras: "Ez a western eposz Arthur Morgan és a Van der Linde banda utolsó napjait meséli el a vadnyugat alkonyán. A Rockstar Games eddigi legrészletesebb világa elképesztő vizualitással és egy hihetetlenül élő ökoszisztémával várja a felfedezőket. A langsam tempójú, karakterközpontú történetvezetés mély érzelmi hatást gyakorol a játékosra, miközben erkölcsi döntéseket kell hoznia. A vadászat, a horgászat és a tábori élet apró részletei mind hozzájárulnak ahhoz, hogy valóban egy 19. századi törvényen kívüli bőrében érezzük magunkat. Nem csupán egy játékról, hanem egy interaktív művészeti alkotásról van szó, amely felejthetetlen élményt nyújt.",
         kep: "img/rdr2.png"
     },
     'yakuza': {
@@ -87,7 +87,6 @@ window.addEventListener('DOMContentLoaded', () => {
         myModal.show();
     }
 });
-
 function hirlevelKezelo(event) {
     event.preventDefault();
     const inputmezo = document.getElementById('newsEmail');
@@ -100,4 +99,16 @@ function hirlevelKezelo(event) {
             visszajelzes.style.display = 'none';
         }, 2500);
     }
+}
+
+function foglalasKezelo(event) {
+    event.preventDefault();
+    alert("Köszönjük! A foglalási igényedet rögzítettük, hamarosan küldjük a visszaigazolást e-mailben!");
+    
+    const bookingModalEl = document.getElementById('bookingModal');
+    const modalInstance = bootstrap.Modal.getInstance(bookingModalEl);
+    if (modalInstance) {
+        modalInstance.hide();
+    }
+    event.target.reset(); 
 }

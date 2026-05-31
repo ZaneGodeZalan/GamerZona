@@ -14,14 +14,14 @@
     />
     <link rel="stylesheet" href="zalan.css" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-      <div class="container">
+  <body onload="initPage()">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top container">
+      <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="zalan.html">[Indie gamek]</a>
-        <div class="navbar-nav ms-auto">
+        <div class="navbar-nav ms-auto flex-row gap-3">
           <a class="nav-link" href="index.html">Főoldal</a>
-          <a class="nav-link" href="">Kornél</a>
-          <a class="nav-link" href="">János</a>
+          <a class="nav-link" href="#">Kornél</a>
+          <a class="nav-link" href="#">János</a>
         </div>
       </div>
     </nav>
@@ -34,10 +34,10 @@
     </div>
 
     <div id="database" class="container my-5">
-      <div class="row">
+      <div class="row g-4">
         <div class="col-lg-4">
           <div class="vault-card p-3">
-            <h3 class="mb-4">Archívum</h3>
+            <h3 class="mb-4 text-white">Archívum</h3>
             <div class="list-group list-group-flush" id="indieMenu">
               <button
                 class="list-btn active"
@@ -96,13 +96,13 @@
           <div class="vault-card news-card" id="news-card-1">
             <div class="news-content">
               <h5>Hades II Bővítés</h5>
-              <p class="small text-muted">2026.05.15</p>
+              <p class="small text-muted date-text">2026.05.15</p>
               <p class="news-text">
                 Hatalmas frissítést jelentettek be az Early Access verzióhoz. Új
                 fegyverek érkeznek...
               </p>
             </div>
-            <button class="btn-neon-mini" onclick="flipNews(1)">
+            <button class="btn-neon-mini mt-3" onclick="flipNews(1)">
               RÉSZLETEK >>
             </button>
           </div>
@@ -112,13 +112,13 @@
           <div class="vault-card news-card" id="news-card-2">
             <div class="news-content">
               <h5>Silksong Jelek</h5>
-              <p class="small text-muted">2026.05.10</p>
+              <p class="small text-muted date-text">2026.05.10</p>
               <p class="news-text">
                 A Team Cherry adatbázis-frissítéseket végzett. Új mechanikák
                 szivárogtak ki a mozgásról...
               </p>
             </div>
-            <button class="btn-neon-mini" onclick="flipNews(2)">
+            <button class="btn-neon-mini mt-3" onclick="flipNews(2)">
               RÉSZLETEK >>
             </button>
           </div>
@@ -128,13 +128,13 @@
           <div class="vault-card news-card" id="news-card-3">
             <div class="news-content">
               <h5>Manor Lords Siker</h5>
-              <p class="small text-muted">2026.05.02</p>
+              <p class="small text-muted date-text">2026.05.02</p>
               <p class="news-text">
                 Az egyetlen fejlesztő által összerakott középkori stratégia
                 letarolta az eladási listákat...
               </p>
             </div>
-            <button class="btn-neon-mini" onclick="flipNews(3)">
+            <button class="btn-neon-mini mt-3" onclick="flipNews(3)">
               RÉSZLETEK >>
             </button>
           </div>
@@ -152,7 +152,7 @@
             >
               <h1
                 class="display-3 fw-bold text-info m-0"
-                style="font-family: &quot;Fira Code&quot;, monospace"
+                style="font-family: 'Fira Code', monospace"
               >
                 10/10
               </h1>
@@ -179,7 +179,7 @@
       </div>
     </div>
 
-    <footer class="footer mt-auto py-3 text-center border-top border-secondary">
+    <footer class="footer mt-5 py-4 text-center border-top border-secondary">
       <span class="text-muted">Legjobb indie game hírek, csak nálunk</span>
     </footer>
     <script src="zalan.js"></script>

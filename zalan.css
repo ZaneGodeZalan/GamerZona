@@ -19,15 +19,16 @@ body {
 }
 
 .hero-section {
-    height: 60vh;
+    height: 40vh;
     background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000');
     background-size: cover;
     background-position: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1320px;
 }
 
 .vault-card {
@@ -35,7 +36,7 @@ body {
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px !important;
-    padding: 20px;
+    padding: 24px;
     height: 100%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
 }
@@ -52,7 +53,7 @@ body {
     text-align: left;
     padding: 12px;
     width: 100%;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
     border-left: 2px solid transparent;
 }
 
@@ -75,23 +76,16 @@ body {
 
 .image-container-neon {
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px;
+    padding: 8px;
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.dev-circle {
-    width: 120px;
-    height: 120px;
-    border: 2px dashed rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    padding: 5px;
-    color: #fff;
+#indieImg {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .description-text {
@@ -104,23 +98,34 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.5s ease;
+    min-height: 250px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.news-card:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(3s) rotateY(3deg);
+    box-shadow: 0 15px 45px rgba(138, 43, 226, 0.4);
+    border-color: #0dcaf0;
 }
 
 .news-content {
     transition: opacity 0.3s ease;
+    flex-grow: 1;
 }
 
 .btn-neon-mini {
     background: transparent;
     border: 1px solid #0dcaf0;
     color: #0dcaf0;
-    font-size: 0.7rem;
-    padding: 5px 10px;
-    align-self: flex-end;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    align-self: flex-start; /* Balra igazítva szebben néz ki */
     cursor: pointer;
     transition: 0.3s;
     border-radius: 8px;
+    font-family: 'Fira Code', monospace;
 }
 
 .btn-neon-mini:hover {
@@ -131,4 +136,23 @@ body {
 
 .fade-out {
     opacity: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(20, 20, 20, 1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(138, 43, 226, 0.6);
+    border-radius: 5px;
+    border: 2px solid rgba(20, 20, 20, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0dcaf0;
+    box-shadow: 0 0 10px #0dcaf0;
 }
