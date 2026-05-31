@@ -12,6 +12,23 @@
     <script src="gaming.js"></script>
   </head>
   <body>
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+          <div class="modal-header">
+            <h5 class="modal-title text-info">Üdvözlünk a Gamer Zónában! 🎮</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="m-0" style="font-style: normal; color: #fff;">Örülünk, hogy benéztél hozzánk! Jó szórakozást és böngészést kívánunk az oldalon!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info text-dark fw-bold w-100" data-bs-dismiss="modal">Belépés</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <div class="container-fluid">
         <ul class="navbar-nav">
@@ -22,10 +39,10 @@
             <a class="nav-link" href="zalan.html">Indie játékok</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="kornel.html">Competetiv gaming</a>
+            <a class="nav-link" href="#">Kornél</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="mate.html">Jani</a>
+            <a class="nav-link disabled" href="#">Jani</a>
           </li>
         </ul>
       </div>
@@ -85,6 +102,15 @@
       >
         Gamer Zóna
       </h1>
+      
+      <div class="row justify-content-center mt-3 mx-1">
+        <div class="col-12 col-md-10 p-4 bg-dark bg-opacity-50 text-white border border-secondary" style="border-radius: 20px; backdrop-filter: blur(8px);">
+          <h3 class="text-info fw-bold mb-3">Gamer Bar & Szórakozóhely</h3>
+          <p class="m-0 text-light" style="font-style: normal; font-size: 1.05rem; line-height: 1.6;">
+            A Gamer Zóna nem csupán egy magazin, hanem a város legmenőbb <strong>Gamer Bar</strong>-ja! Nálunk a prémium italok és finom falatok mellett a legújabb next-gen konzolok, high-end PC-k és klasszikus arcade játékgépek várnak rád. Ugorj le hozzánk a barátaiddal, kövesd a legnagyobb E-Sport közvetítéseket óriáskivetítőkön, vagy nevezz be a heti rendszerességű házi versenyeinkre!
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="container mt-5">
@@ -289,10 +315,24 @@
       </div>
     </div>
 
-    <div class="mt-5 p-4 bg-dark text-white text-center">
-      <p>Elérhetőségeink:</p>
-      <p>Tel: 06706767169 | E-mail: berrieddelight67@gmail.com</p>
-      <p class="text-dark">Ez a weboldal a KKSZKI tulajdona, minden jog fent tartva és oktaási céllal jött létre</p>
+    <div class="mt-5 p-4 bg-dark text-white text-center border-top border-secondary">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-md-start mb-4 mb-md-0">
+            <p class="mb-1">Elérhetőségeink:</p>
+            <p class="mb-1">Tel: 06706767169 | E-mail: berrieddelight67@gmail.com</p>
+            <p class="text-secondary small m-0">Ez a weboldal a KKSZKI tulajdona, minden jog fent tartva és oktatási céllal jött létre</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-info mb-2 text-md-end">Iratkozz fel a hírlevelünkre!</h5>
+            <form onsubmit="hirlevelKezelo(event)" class="d-flex gap-2 justify-content-md-end">
+              <input type="email" id="newsEmail" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="E-mail címed..." required style="max-width: 250px;">
+              <button type="submit" class="btn btn-sm btn-info fw-bold">Feliratkozás</button>
+            </form>
+            <div id="newsletter-feedback" class="text-info small text-md-end mt-2" style="display: none;">[SIKERES FELIRATKOZÁS!]</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

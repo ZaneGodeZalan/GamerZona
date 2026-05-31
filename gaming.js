@@ -1,7 +1,7 @@
 const jatekAdatok = {
     'fifa': {
         cim: "EA Sports FC (FIFA)",
-        leiras: "Az EA Sports FC a világ legnépszerűbb futballszimulátora, amelyben a realizmus és a licencelt csapatok sokasága dominál. A játékosok saját klubot építhetnek az Ultimate Team módban, vagy átélhetik egy profi focista karrierjét a menedzser módban is. A modern technológiáknak köszönhetően a mozgások és a labda fizikai viselkedése évről évre élethűbbé válik. Legyen szó baráti meccsekről vagy komoly online rangsorolt küzdelmekről, a játék minden stílushoz kínál megfelelő kihívást. Ez a sorozat évtizedek óta a sportjátékok megkerülhetetlen királya, amely összehozza a rajongókat a világ minden tájáról.",
+        leiras: "Az EA Sports FC a világ legnépszerűbb futballszimulátora, amelyben a realizmus és a licencelt csapatok sokasága dominál. A játékosok saját klubot építhetnek az Ultimate Team módban, vagy átélhetik egy profi focista karrierjét a menedzser módban is. A modern technológiáknak köszönheden a mozgások és a labda fizikai viselkedése évről évre élethűbbé válik. Legyen szó baráti meccsekről vagy komoly online rangsorolt küzdelmekről, a játék minden stílushoz kínál megfelelő kihívást. Ez a sorozat évtizedek óta a sportjátékok megkerülhetetlen királya, amely összehozza a rajongókat a világ minden tájáról.",
         kep: "img/ea-fc-26.jpg" 
     },
     'gta': {
@@ -77,5 +77,27 @@ function szavazas(jatekKulcs) {
         setTimeout(() => {
             visszajelzes.style.display = 'none';
         }, 2000);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const welcomeModalEl = document.getElementById('welcomeModal');
+    if (welcomeModalEl) {
+        const myModal = new bootstrap.Modal(welcomeModalEl);
+        myModal.show();
+    }
+});
+
+function hirlevelKezelo(event) {
+    event.preventDefault();
+    const inputmezo = document.getElementById('newsEmail');
+    const visszajelzes = document.getElementById('newsletter-feedback');
+    
+    if (inputmezo && inputmezo.value.trim() !== "") {
+        visszajelzes.style.display = 'block';
+        inputmezo.value = "";
+        setTimeout(() => {
+            visszajelzes.style.display = 'none';
+        }, 2500);
     }
 }
